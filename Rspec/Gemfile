@@ -1,0 +1,9 @@
+source "https://rubygems.org"
+
+#git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+require 'rspec'
+require 'rspec-core'
+#require 'site_prism'
+#require 'capybara'
+#require 'capybara/dsl'
