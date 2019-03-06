@@ -3,6 +3,7 @@ require 'site_prism'
 require 'capybara'
 require 'capybara/dsl'
 include Capybara::DSL
+require 'turnip'  
 
 Capybara.default_driver = :firefox
 Capybara.register_driver :firefox do |app|
