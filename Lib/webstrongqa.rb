@@ -14,7 +14,7 @@ Capybara.register_driver :firefox do |app|
 end
 
 class LoginSection < SitePrism::Section
-  element :useremail, '#user_email'
+  element :user_email, '#user_email'
   element :password, '#user_password'
   element :login_button, 'input[name="commit"]'
   element :remember_me, :xpath, '//label[@for="user_remember_me"]'
@@ -27,8 +27,8 @@ class Home < SitePrism::Page
   element :flash_alert, '#flash_alert'
   section :login_section, LoginSection, '.authform'
 
-  def set_useremail(useremail)
-    login_section.useremail.set useremail
+  def set_user_email(user_email)
+    login_section.user_email.set user_email
   end
 
   def set_password(password)

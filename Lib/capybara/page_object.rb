@@ -3,11 +3,11 @@ require 'site_prism'
 FailedObjectConversion = Class.new(StandardError)
 
 class LoginSection < SitePrism::Section
-  element :useremail, '#user_email'
+  element :user_email, '#user_email'
   element :password, '#user_password'
-  element :loginbutton, 'input[name="commit"]'
+  element :login_button, 'input[name="commit"]'
 
-  element :rememberme, :xpath, '//label[@for="user_remember_me"]'
+  element :remember_me, :xpath, '//label[@for="user_remember_me"]'
 end
 
 class Home < SitePrism::Page
@@ -16,14 +16,14 @@ class Home < SitePrism::Page
   element :login_btn, :xpath, '//a[contains(text(), "Login")]'
   element :logout_btn, :xpath, '//a[contains(text(), "Logout")]'
   element :flash_alert, '#flash_alert'
-  section :loginsection, LoginSection, '.authform'
+  section :login_section, LoginSection, '.authform'
 
-  def set_useremail(useremail)
-    loginsection.useremail.set useremail
+  def set_user_email(user_email)
+    login_section.user_email.set user_email
   end
 
   def set_password(password)
-    loginsection.password.set password
+    login_section.password.set password
     end
 
   def find_alert(has_element, alert_element, tc)

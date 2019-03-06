@@ -33,9 +33,9 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('su160985pev@gmail.com')
+  @home_page.set_user_email('su160985pev@gmail.com')
   @home_page.set_password('test_password')
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_logout_btn(@home_page.has_logout_btn?, 'tc_02')
 rescue StandardError => e
   puts "tc_02 is failed due to #{e}"
@@ -47,10 +47,10 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('su160985pev@gmail.com')
+  @home_page.set_user_email('su160985pev@gmail.com')
   @home_page.set_password('test_password')
-  @home_page.loginsection.rememberme.click
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.remember_me.click
+  @home_page.login_section.login_button.click
   @home_page.find_logout_btn(@home_page.has_logout_btn?, 'tc_03_1')
 rescue StandardError => e
   puts "tc_03_1 is failed due to #{e}"
@@ -85,8 +85,8 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('su160985pev@gmail.com')
-  @home_page.loginsection.loginbutton.click
+  @home_page.set_user_email('su160985pev@gmail.com')
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_04_1')
 rescue StandardError => e
   puts "tc_04_1 is failed due to #{e}"
@@ -99,7 +99,7 @@ begin
   @home_page.load
   @home_page.login_btn.click
   @home_page.set_password('test_password')
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_04_2')
 rescue StandardError => e
   puts "tc_04_2 is failed due to #{e}"
@@ -111,7 +111,7 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_04_3')
 rescue StandardError => e
   puts "tc_04_3 is failed due to #{e}"
@@ -123,9 +123,9 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('incorrect_mail@gmail.com')
+  @home_page.set_user_email('incorrect_mail@gmail.com')
   @home_page.set_password('test_password')
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_05_1')
 rescue StandardError => e
   puts "tc_05_1 is failed due to #{e}"
@@ -137,9 +137,9 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('su160985pev@gmail.com')
+  @home_page.set_user_email('su160985pev@gmail.com')
   @home_page.set_password('incorrect_password')
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_05_2')
 rescue StandardError => e
   puts "tc_05_2 is failed due to #{e}"
@@ -151,9 +151,9 @@ begin
   @home_page = Home.new
   @home_page.load
   @home_page.login_btn.click
-  @home_page.set_useremail('incorrect_mail@gmail.com')
+  @home_page.set_user_email('incorrect_mail@gmail.com')
   @home_page.set_password('incorrect_password')
-  @home_page.loginsection.loginbutton.click
+  @home_page.login_section.login_button.click
   @home_page.find_alert(@home_page.has_flash_alert?, @home_page.flash_alert, 'tc_05_3')
 rescue StandardError => e
   puts "tc_05_3 is failed due to #{e}"
