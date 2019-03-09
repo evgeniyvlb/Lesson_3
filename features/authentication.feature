@@ -25,37 +25,31 @@ Feature: Authentication
     When navigate to home page
     Then is unauthenticated at home page
 
-@negative_steps
   Scenario: user can not sign in to website without password
     Given login page with empty password
     And try to login
     Then get an error of incorrect email or password
 
-@negative_steps
   Scenario: user can not sign in to website without email
     Given login page with empty email
     And try to login
     Then get an error of incorrect email or password
 
-@negative_steps
   Scenario: user can not sign in to website without email and password
     Given login page with empty email and password
     And try to login
     Then get an error of incorrect email or password
 
-@negative_steps
   Scenario: user can not sign in to website with incorrect email
     Given login page with incorrect email
     And try to login
     Then get an error of incorrect email or password
 
-@negative_steps
   Scenario: user can not sign in to website with incorrect password
     Given login page with incorrect password
     And try to login
     Then get an error of incorrect email or password
 
-@negative_steps
   Scenario: user can not sign in to website with incorrect password and email
     Given login page with incorrect password and email
     And try to login
