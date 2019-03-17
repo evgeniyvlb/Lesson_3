@@ -35,10 +35,10 @@ let(:home_page) {Home.new}
       expect(home_page).to have_logout_btn
 	    Capybara.reset_sessions!
     end
-
+#issue not_to
 	  it "should not be authorized tc_03_3" do
       home_page.load
-      expect(home_page).not_to have_logout_btn
+      expect(home_page).to have_no_logout_btn
 	    Capybara.reset_sessions!
     end
 
