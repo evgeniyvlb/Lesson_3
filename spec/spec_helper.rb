@@ -13,3 +13,5 @@ RSpec.configure do |config|
 
   Kernel.srand config.seed
 end
+
+#Dir.glob('spec/steps/**/*steps.rb') { |f| load f, true }
